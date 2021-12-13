@@ -1,6 +1,10 @@
+import 'package:firedart/firedart.dart';
 import 'package:flutter/material.dart';
+import 'package:tftc_for_computer/constants/firebase_configurations.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firestore.initialize(FirebaseConfigurations.projectId);
   runApp(MyApp());
 }
 
@@ -8,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'TTFC - Share File Your Computer',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
